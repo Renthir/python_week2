@@ -1,4 +1,7 @@
-class Cupcake():
+from abc import ABC, abstractmethod
+
+class Cupcake(ABC):
+    size = 'regular'
     def __init__(self, name, price, flavor, filling, frosting):
         self.name = name
         self.price = price
@@ -10,14 +13,51 @@ class Cupcake():
     def add_sprinkles(self, *args):
         for i in args:
             self.sprinkles.append(i)
-        pass
+    
+    def __repr__(self):
+        return self.items()
+
+    @abstractmethod    
+    def calculate_price(self, quantity):
+        return quantity * self.price
     
 
-lemon_cake  = Cupcake('Lemon Cake', 5.99, 'Lemon', 'Lemon Creme', 'Lemon')
-cookies_cake = Cupcake("Cookies and Cream", 2.99, "Chocolate", "Vanilla", "Oreo")
+class MiniCC(Cupcake):
+    size = 'mini'
+    def __init__(self, name, price, flavor, frosting):
+        self.name = name
+        self.price = price
+        self.flavor = flavor
+        self.frosting = frosting
+        self.sprinkles = []
 
-lemon_cake.filling = 'vanilla'
+  
+    def calculate_price(self, quantity):
+        return quantity * self.price
 
-cookies_cake.is_mini = False
 
-lemon_cake.add_sprinkles('Chocolate', 'Stars', 'vanilla')
+class RegularCC(Cupcake):
+
+    def __init__(self, name, price, flavor, frosting):
+        self.name = name
+        self.price = price
+        self.flavor = flavor
+        self.frosting = frosting
+        self.sprinkles = []
+
+  
+    def calculate_price(self, quantity):
+        return quantity * self.price
+    
+class LargeCC(Cupcake):
+    size = 'large'
+    def __init__(self, name, price, flavor, frosting):
+        self.name = name
+        self.price = price
+        self.flavor = flavor
+        self.frosting = frosting
+        self.sprinkles = []
+
+  
+    def calculate_price(self, quantity):
+        return quantity * self.price    
