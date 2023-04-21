@@ -1,0 +1,8 @@
+size,name,price,flavor,frosting,sprinkles,filling
+mini,Phantom Presence,0.99,Vanilla,Lavender,['Silver Dragees'],
+regular,Burnished Rose,2.99,Red Velvet,Cream Cheese,[],
+regular,Purple Rose,2.99,Chocolate,Cream Cheese,['Leaf']
+mini,Graveyard,0.99,Chocolate,Cookies and Cream,['Oreo pieces'],
+large,Abyssal Indulgence,4.99,Chocolate,Chocolate,[],Chocolate
+regular,Bleeding Heart,2.99,Vanilla,Vanilla,[],Stawberry
+regular,Stygian Sin,3.50,Dark Chocolate,Whipped Cream,['Dark Chocolate Shavings', 'Cherry'],Cherry Compote

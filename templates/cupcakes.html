@@ -1,0 +1,18 @@
+{%extends "index.html"%}
+{%block content%}
+
+{% for cupcake in cupcakes %}
+<div style="height: 50px; width: 100%;"></div>
+<div class="card bg-dark" style="width: 18rem;" data-bs-theme="dark">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">{{cupcake["name"]}}</h5>
+      <p class="card-text">Flavor: {{cupcake["flavor"]}}</p>
+      <p class="card-text">Frosting: {{cupcake["frosting"]}}</p>
+      <p class="card-text">Price: {{cupcake["price"]}}</p>
+      <a href="{{ url_for('add_cupcake', name=cupcake['name']) }}" class="btn btn-primary">Add to Order</a>
+    </div>
+  </div>
+{% endfor %}
+
+{%endblock%}
