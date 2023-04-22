@@ -1,8 +1,8 @@
-size,name,price,flavor,frosting,sprinkles,filling
-mini,Phantom Presence,0.99,Vanilla,Lavender,['Silver Dragees'],
-regular,Burnished Rose,2.99,Red Velvet,Cream Cheese,[],
-regular,Purple Rose,2.99,Chocolate,Cream Cheese,['Leaf']
-mini,Graveyard,0.99,Chocolate,Cookies and Cream,['Oreo pieces'],
-large,Abyssal Indulgence,4.99,Chocolate,Chocolate,[],Chocolate
-regular,Bleeding Heart,2.99,Vanilla,Vanilla,[],Stawberry
-regular,Stygian Sin,3.50,Dark Chocolate,Whipped Cream,['Dark Chocolate Shavings', 'Cherry'],Cherry Compote
+size,name,price,flavor,frosting,sprinkles,filling,file_name
+mini,Phantom Presence,0.99,Lemon,Lavender,['Silver Dragees'],,lemon-lav.PNG
+regular,Burnished Rose,2.99,Red Velvet,Cream Cheese,[],,burnished-rose.jpg
+regular,Purple Rose,2.99,Chocolate,Cream Cheese,[''],,purple-rose.jpg
+mini,Graveyard,0.99,Chocolate,Cookies and Cream,['Oreo pieces'],,graveyard.jpg
+large,Abyssal Indulgence,4.99,Chocolate,Chocolate,[],Chocolate,abyssal-indulgence.jpg
+regular,Bleeding Heart,2.99,Vanilla,Vanilla,[],Stawberry,bleeding-heart.jpg
+regular,Stygian Sin,3.50,Dark Chocolate,Whipped Cream,['Dark Chocolate Shavings'],Cherry Compote,stygian-sin.jpg

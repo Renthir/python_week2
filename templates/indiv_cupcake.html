@@ -1,4 +1,18 @@
 {%extends "index.html"%}
 {%block content%}
 
+<div style="height: 50px; width: 100%;"></div>
+<main class="container-fluid hstack gap-5 flex-wrap justify-content-center">
+    <div class="card bg-dark mb-3" data-bs-theme="dark">
+        <img src="static/{{cupcake['file_name']}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{cupcake["name"]}}</h4>
+          <h6 class="card-text">Flavor: {{cupcake["flavor"]}}</h6>
+          <h6 class="card-text">Frosting: {{cupcake["frosting"]}}</h6>
+          <p>Add Description here</p>
+          <h6 class="card-text">Price: {{cupcake["price"]}}</h6>
+          <a href="{{ url_for('add_cupcake', name=cupcake['name']) }}" class="btn btn-primary">Add to Order</a>
+        </div>
+    </div>
+</main>
 {%endblock%}

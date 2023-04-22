@@ -18,8 +18,11 @@
         </div>
     </nav>
     {%block content%}
+    <div style="height: 50px; width: 100%;"></div>
     <main>
-
+        <header class="container p-4 my-2 bg-dark rounded-1 justify-content-center">
+            <img src="static/{{cupcake['file_name']}}" class="img-fluid" alt="">
+        </header>
     </main>
     {%endblock%}
     <footer>

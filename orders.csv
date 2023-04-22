@@ -1,2 +1,4 @@
-size,name,price,flavor,frosting,sprinkles,filling
-mini,Phantom Presence,0.99,Vanilla,Lavender,['Silver Dragees'],
+size,name,price,flavor,frosting,sprinkles,filling,file_name
+mini,Phantom Presence,0.99,Vanilla,Lavender,['Silver Dragees'],,lemon-lav.PNG
+large,Abyssal Indulgence,4.99,Chocolate,Chocolate,[],Chocolate,abyssal-indulgence.jpg
+mini,Phantom Presence,0.99,Lemon,Lavender,['Silver Dragees'],,lemon-lav.PNG

@@ -18,6 +18,12 @@ def find_cupcakes(file, name):
 
 def add_cupcake_dict(file, cupcake):
     with open(file, 'a', newline='\n') as csvfile:
-        fieldnames = ["size", "name", "price", "flavor", "frosting", "sprinkles", "filling"]
+        fieldnames = ["size", "name", "price", "flavor", "frosting", "sprinkles", "filling", "file_name"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writerow(cupcake)
+
+def get_order(file):
+    with open(file) as csvfile:
+        reader = csv.DictReader(csvfile)
+        order = list(reader)
+        return order

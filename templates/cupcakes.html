@@ -1,18 +1,21 @@
 {%extends "index.html"%}
 {%block content%}
 
-{% for cupcake in cupcakes %}
 <div style="height: 50px; width: 100%;"></div>
-<div class="card bg-dark" style="width: 18rem;" data-bs-theme="dark">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
-    <div class="card-body">
-      <h5 class="card-title">{{cupcake["name"]}}</h5>
-      <p class="card-text">Flavor: {{cupcake["flavor"]}}</p>
-      <p class="card-text">Frosting: {{cupcake["frosting"]}}</p>
-      <p class="card-text">Price: {{cupcake["price"]}}</p>
-      <a href="{{ url_for('add_cupcake', name=cupcake['name']) }}" class="btn btn-primary">Add to Order</a>
+<main class="container-fluid hstack gap-5 flex-wrap justify-content-center">
+    {% for cupcake in cupcakes %}
+    <div class="card bg-dark" style="width: 18rem; " data-bs-theme="dark">
+        <img src="static/{{cupcake['file_name']}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{cupcake["name"]}}</h4>
+          <h6 class="card-text">Flavor: {{cupcake["flavor"]}}</h6>
+          <h6 class="card-text">Frosting: {{cupcake["frosting"]}}</h6>
+          <h6 class="card-text">Price: {{cupcake["price"]}}</h6>
+          <a href="{{ url_for('add_cupcake', name=cupcake['name']) }}" class="btn btn-primary">Add to Order</a>
+          <a href="{{ url_for('indiv_cupcake', name=cupcake['name']) }}" class="btn btn-primary">Details</a>
+        </div>
     </div>
-  </div>
-{% endfor %}
+    {% endfor %}
+</main>
 
 {%endblock%}
